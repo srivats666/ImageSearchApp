@@ -39,3 +39,5 @@ Advanced: Improving Performance with the ViewHolder Pattern.
 
 Bonus: Use the StaggeredGridView to display improve the grid of image results.
 
+Bonus: User can zoom or pan images displayed in full-screen detail view
+
