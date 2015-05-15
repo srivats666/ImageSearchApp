@@ -41,3 +41,9 @@ Bonus: Use the StaggeredGridView to display improve the grid of image results.
 
 Bonus: User can zoom or pan images displayed in full-screen detail view
 
+![alt tag](https://github.com/srivats666/InstagramCloneApp/blob/master/ImageSearch1.png)
+
+![alt tag](https://github.com/srivats666/InstagramCloneApp/blob/master/ImageSearch2.png)
+
+![alt tag](https://github.com/srivats666/InstagramCloneApp/blob/master/ImageSearch3.png)
+
