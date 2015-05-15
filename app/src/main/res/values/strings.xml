@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">GridImageSearch</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_prompt">Enter search query</string>
+    <string name="search_label">Search</string>
+    <string name="image_content_desc">Image Result</string>
+    <string name="title_text">Image Title</string>
+    <string name="title_activity_image_display">Full Image</string>
+    <string name="title_activity_filter_settings">Filter Settings</string>
+
+    <string name="filter_search_label">Search Options</string>
+
+    <string name="filter_size_label">Image Size</string>
+    <string name="size_prompt">Choose a Size</string>
+    <string-array name="size_arrays">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>extra-large</item>
+    </string-array>
+
+    <string name="filter_color_label">Color filter</string>
+
+    <string name="filter_type_label">Image Type</string>
+    <string name="type_prompt">Choose a type</string>
+    <string name="filter_site_label">Site filter</string>
+    <string name="button_label">Save</string>
+    <string name="site_hint_label">www.google.com</string>
+    <string name="color_hint_label">blue</string>
+    <string-array name="type_arrays">
+        <item>faces</item>
+        <item>photo</item>
+        <item>clip art</item>
+        <item>line art</item>
+    </string-array>
+    <string-array name="color_arrays">
+        <item>black</item>
+        <item>green</item>
+        <item>orange</item>
+        <item>pink</item>
+        <item>purple</item>
+        <item>red</item>
+        <item>teal</item>
+        <item>white</item>
+        <item>yellow</item>
+        <item>blue</item>
+        <item>brown</item>
+        <item>gray</item>
+    </string-array>
+
+    <string name="json_error_message">There was an unexpected error, please try later.</string>
+    <string name="no_internet">Internet not available, please try later.</string>
+    <string name="share_error">Error loading image.</string>
+
+
+
+</resources>
