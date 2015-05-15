@@ -82,7 +82,7 @@ public class FilterSettingsDialog extends DialogFragment {
         adapter_category.setDropDownViewResource(R.layout.my_spinner_dropdown_item);
         spColor.setAdapter(adapter_category);
 
-        SearchFilter filter = (SearchFilter)getArguments().getSerializable("filter");
+        SearchFilter filter = (SearchFilter)getArguments().getParcelable("filter");
 
         if(filter.colorFilter!= null && !"".equals(filter.colorFilter))
             SelectSpinnerItemByValue(spColor, filter.colorFilter);

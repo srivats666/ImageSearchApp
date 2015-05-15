@@ -38,7 +38,7 @@ public class ImageDisplayActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_display);
-        ImageResult imageResult = (ImageResult)getIntent().getSerializableExtra("result");
+        ImageResult imageResult = (ImageResult)getIntent().getParcelableExtra("result");
         ivImageResult = (ImageView)findViewById(R.id.ivResultImage);
         tvContent = (TextView)findViewById(R.id.tvContent);
 
@@ -48,7 +48,7 @@ public class ImageDisplayActivity extends ActionBarActivity {
                 .cornerRadiusDp(35)
                 .build();
 
-        Picasso.with(this).load(imageResult.fullUrl).fit().placeholder(R.drawable.placeholder1).into(ivImageResult, new Callback(){
+        Picasso.with(this).load(imageResult.fullUrl).placeholder(R.drawable.placeholder1).fit().into(ivImageResult, new Callback(){
 
             @Override
             public void onSuccess() {

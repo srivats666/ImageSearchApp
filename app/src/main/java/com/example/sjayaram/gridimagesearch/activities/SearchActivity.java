@@ -195,7 +195,7 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
         FilterSettingsDialog editNameDialog = FilterSettingsDialog.newInstance(getResources().getString(R.string.filter_search_label));
         editNameDialog.show(fm, "fragment_edit_name");
         Bundle args = new Bundle();
-        args.putSerializable("filter", filter);
+        args.putParcelable("filter", filter);
         editNameDialog.setArguments(args);
     }
 
@@ -207,7 +207,7 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
         // 3. Extract result
         if(requestCode == filter_code){
             if(resultCode == RESULT_OK){
-                filter = (SearchFilter)data.getSerializableExtra("filter");
+                filter = (SearchFilter)data.getParcelableExtra("filter");
             }
         }
     }
