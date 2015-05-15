@@ -207,7 +207,7 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
         // 3. Extract result
         if(requestCode == filter_code){
             if(resultCode == RESULT_OK){
-                filter = (SearchFilter)data.getParcelableExtra("filter");
+                filter = data.getParcelableExtra("filter");
             }
         }
     }

@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.sjayaram.gridimagesearch.R;
 import com.example.sjayaram.gridimagesearch.models.ImageResult;
 import com.makeramen.roundedimageview.RoundedTransformationBuilder;
+import com.ortiz.touch.TouchImageView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -31,15 +32,15 @@ import java.io.IOException;
 public class ImageDisplayActivity extends ActionBarActivity {
 
     private ShareActionProvider miShareAction;
-    ImageView ivImageResult;
+    TouchImageView ivImageResult;
     TextView tvContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_display);
-        ImageResult imageResult = (ImageResult)getIntent().getParcelableExtra("result");
-        ivImageResult = (ImageView)findViewById(R.id.ivResultImage);
+        ImageResult imageResult = getIntent().getParcelableExtra("result");
+        ivImageResult = (TouchImageView)findViewById(R.id.ivResultImage);
         tvContent = (TextView)findViewById(R.id.tvContent);
 
         tvContent.setText(Html.fromHtml(imageResult.content));
@@ -48,7 +49,7 @@ public class ImageDisplayActivity extends ActionBarActivity {
                 .cornerRadiusDp(35)
                 .build();
 
-        Picasso.with(this).load(imageResult.fullUrl).placeholder(R.drawable.placeholder1).fit().into(ivImageResult, new Callback(){
+        Picasso.with(this).load(imageResult.fullUrl).placeholder(R.drawable.placeholder1).fit().into(ivImageResult, new Callback() {
 
             @Override
             public void onSuccess() {
