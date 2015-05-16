@@ -33,7 +33,6 @@ public class ImageDisplayActivity extends ActionBarActivity {
 
     private ShareActionProvider miShareAction;
     TouchImageView ivImageResult;
-    TextView tvContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +40,8 @@ public class ImageDisplayActivity extends ActionBarActivity {
         setContentView(R.layout.activity_image_display);
         ImageResult imageResult = getIntent().getParcelableExtra("result");
         ivImageResult = (TouchImageView)findViewById(R.id.ivResultImage);
-        tvContent = (TextView)findViewById(R.id.tvContent);
 
-        tvContent.setText(Html.fromHtml(imageResult.content));
-
-        Transformation transformation = new RoundedTransformationBuilder()
-                .cornerRadiusDp(35)
-                .build();
-
-        Picasso.with(this).load(imageResult.fullUrl).placeholder(R.drawable.placeholder1).fit().into(ivImageResult, new Callback() {
+        Picasso.with(this).load(imageResult.fullUrl).placeholder(R.drawable.placeholder1).fit().centerInside().into(ivImageResult, new Callback() {
 
             @Override
             public void onSuccess() {
@@ -85,10 +77,8 @@ public class ImageDisplayActivity extends ActionBarActivity {
         Uri bmpUri = getLocalBitmapUri(ivImageResult); // see previous remote images section
         // Create share intent as described above
         Intent shareIntent = new Intent();
-        shareIntent.setType("text/html");
 
         shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(tvContent.getText().toString()));
         shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
 
         shareIntent.setType("image/*");

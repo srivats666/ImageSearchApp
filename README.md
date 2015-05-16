@@ -41,6 +41,8 @@ Bonus: Use the StaggeredGridView to display improve the grid of image results.
 
 Bonus: User can zoom or pan images displayed in full-screen detail view
 
+Bonus: Used Parcelable to pass objects between intents.
+
 ![alt tag](https://github.com/srivats666/ImageSearchApp/blob/master/ImageSearch1.png)
 
 ![alt tag](https://github.com/srivats666/ImageSearchApp/blob/master/ImageSearch2.png)

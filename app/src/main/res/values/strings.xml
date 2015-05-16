@@ -15,6 +15,7 @@
     <string name="filter_size_label">Image Size</string>
     <string name="size_prompt">Choose a Size</string>
     <string-array name="size_arrays">
+        <item>Choose Size</item>
         <item>small</item>
         <item>medium</item>
         <item>large</item>
@@ -29,13 +30,17 @@
     <string name="button_label">Save</string>
     <string name="site_hint_label">www.google.com</string>
     <string name="color_hint_label">blue</string>
+
     <string-array name="type_arrays">
+        <item>Choose Type</item>
         <item>faces</item>
         <item>photo</item>
-        <item>clip art</item>
-        <item>line art</item>
+        <item>clipart</item>
+        <item>lineart</item>
     </string-array>
+
     <string-array name="color_arrays">
+        <item>Choose Color</item>
         <item>black</item>
         <item>green</item>
         <item>orange</item>
