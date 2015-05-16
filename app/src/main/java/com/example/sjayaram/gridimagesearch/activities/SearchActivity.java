@@ -120,16 +120,16 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
         StringBuilder url = new StringBuilder("http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+ query +"&rsz=8" +
                 "&start="+start);
 
-        if(filter.colorFilter!= null && !"".equals(filter.colorFilter))
+        if(filter.colorFilter!= null && !"".equals(filter.colorFilter) && !"Choose Color".equals(filter.colorFilter))
             url.append("&imgc=" + filter.colorFilter);
 
         if(filter.siteFilter!=null && !"".equals(filter.siteFilter))
             url.append("&as_sitesearch=" + filter.siteFilter);
 
-        if(filter.imageSize!=null && !"".equals(filter.imageSize))
+        if(filter.imageSize!=null && !"".equals(filter.imageSize) && !"Choose Size".equals(filter.imageSize))
             url.append("&imgsz=" + filter.imageSize);
 
-        if(filter.imageType!=null && !"".equals(filter.imageType))
+        if(filter.imageType!=null && !"".equals(filter.imageType) && !"Choose Type".equals(filter.imageType))
             url.append("&imgtype=" + filter.imageType);
 
         if(!isNetworkAvailable()){

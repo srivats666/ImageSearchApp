@@ -23,7 +23,9 @@ User can scroll down “infinitely” to continue loading more image results (up
 
 Overriding onFailure method in JsonHttpResponseHandler to handle error messages and notify user appropriately.
 
-Externalizing error messages, spinner and labels to strings.xml.
+Externalizing error messages, spinner and labels to strings.xml. Packaging and organizing the code.
+
+Used launchMode to alter the task stack behavior of the activity.
 
 Advanced: Robust error handling, check if internet is available, handle error cases, network failures.
 

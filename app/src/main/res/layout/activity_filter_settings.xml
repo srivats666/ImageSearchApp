@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="@string/filter_type_label"
         android:id="@+id/tvTypeLabel"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/tvColorLabel"
         android:layout_alignStart="@+id/tvSizeLabel"
         />
