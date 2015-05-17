@@ -62,12 +62,22 @@ public class ImageDisplayActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_image_display, menu);
+        /*getMenuInflater().inflate(R.menu.menu_image_display, menu);
         MenuItem item = menu.findItem(R.id.menu_item_share);
         // Fetch reference to the share action provider
         miShareAction = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
         // Return true to display menu
-        return true;
+*/        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_image_display, menu);
+        MenuItem item = menu.findItem(R.id.menu_item_share);
+        // Fetch reference to the share action provider
+        miShareAction = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
+
+        return super.onPrepareOptionsMenu(menu);
     }
 
     // Gets the image URI and setup the associated share intent to hook into the provider

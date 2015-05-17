@@ -51,3 +51,4 @@ Bonus: Used Parcelable to pass objects between intents.
 
 ![alt tag](https://github.com/srivats666/ImageSearchApp/blob/master/ImageSearch3.png)
 
+![alt tag](https://github.com/srivats666/ImageSearchApp/blob/master/ImageSearch.gif)
