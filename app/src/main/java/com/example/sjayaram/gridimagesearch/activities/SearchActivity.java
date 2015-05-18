@@ -21,6 +21,7 @@ import com.etsy.android.grid.StaggeredGridView;
 import com.example.sjayaram.gridimagesearch.Listeners.EndlessScrollListener;
 import com.example.sjayaram.gridimagesearch.fragments.FilterSettingsDialog;
 import com.example.sjayaram.gridimagesearch.adapters.ImageResultAdapter;
+import com.example.sjayaram.gridimagesearch.helpers.Utils;
 import com.example.sjayaram.gridimagesearch.models.ImageResult;
 import com.example.sjayaram.gridimagesearch.R;
 import com.example.sjayaram.gridimagesearch.models.SearchFilter;
@@ -132,7 +133,7 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
         if(filter.imageType!=null && !"".equals(filter.imageType) && !"Choose Type".equals(filter.imageType))
             url.append("&imgtype=" + filter.imageType);
 
-        if(!isNetworkAvailable()){
+        if(!Utils.isNetworkAvailable(this.getApplicationContext())){
             //toast the error
             Toast.makeText(getApplicationContext(), R.string.no_internet, Toast.LENGTH_LONG).show();
         }
@@ -166,13 +167,6 @@ public class SearchActivity extends ActionBarActivity implements FilterSettingsD
             });
         }
 
-    }
-
-    private Boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
     }
 
     @Override
